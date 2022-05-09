@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accueil</title>
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Accueil</a>
+        <div class="sousMenu">
+            <a href="formation.html" class="sousMenu__btn">Formation</a>
+            <div class="sousMenu__contenu">
+                <a href="#">Établissement</a>
+                <a href="formation.html">Photos</a>
+                <a href="#">Information</a>
+            </div>
+        </div>
+        <a href="experiences.html">Expériences</a>
+        <div class="sousMenu">
+            <a href="contact.html" class="sousMenu__btn">Contact</a>
+            <div class="sousMenu__contenu">
+                <a href="contact.html">Commentaire</a>
+                <a href="#">Message</a>
+                <a href="#">Téléphone</a>
+            </div>
+        </div>
+        <a href="validation.html">Validation</a>
+    </nav>
+    <main>
+        <section class="contact__form">
+            <div>
+                <h2>Contacts</h2>
+                <h5> ☎️ - (438) xxx - xxxx </h5>
+                <h5> 🌐 - <a class="lienDecor" href="https://www.google.com/ ">https://www.google.com/</a></h5>
+                <h5> 📧 - mkodarenko@gmail.com </h5>
+            </div>
+            <form>
+                <h2>Laisser un message</h2>
+                <h5>Bonjour <select name="sex" id="sex">
+                    <option value="M">M.</option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mlle">Mlle.</option>
+                    <option value="Mme">Mme.</option>
+                </select>,</h5>
+                <table>
+                    <tr>
+                        <td><h5>Prénom: <input class='nom__conf' type="text" id="prenom" name="prenom" placeholder="Prénom"/></h5></td>
+                        <td><h5>Nom: <input class='nom__conf' type="text" id="nom" name="nom" placeholder="Nom"/></h5></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Courriel:<input type="text" id="courriel" name="courriel" placeholder="Votre courriel"/></h5></td>
+                        <td><h5>Téléphone: <input type="text" id="cell" name="cell" placeholder="(514)555-1111"/></h5></td>
+                    </tr>
+                </table>
+                <h5>Votre commentaire: </h5>
+                <textarea id="commentaire" name="commentaire" placeholder="Entrez votre commentaire"></textarea>
+                <br/><input class="btn" type="submit" value="Envoyer"/>
+            </form>
+        </section>
+    </main>
+    <footer>
+        @ Tous les droits sont réservés
+    </footer>
+</body>
+</html>

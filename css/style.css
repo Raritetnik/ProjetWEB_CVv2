@@ -1,0 +1,383 @@
+/** Paramètres basique
+======================================*/
+/* Predefinition de base sur le texte, font, et couleur de texte*/
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #3b3b3b;
+    margin: auto;
+    color: aliceblue;
+}
+/* Placer au centre le texte */
+header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+/* Ajustement visuel du contenu principale */
+main {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+/* Mettre le footer sur le bas de la page */
+footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 40px;
+    background-color: #585858;
+    text-align: end;
+    padding: 10px 3% 10px 0;
+    width: 97%;
+
+}
+
+
+/** Menu principale
+======================================*/
+/* Ajustement du menu */
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    list-style: none;
+    margin: 0;
+    background-color: black;
+    padding: 0;
+    font-size: 13px;
+
+    background-color: #585858;
+}
+/* Ajustement du texte du menu */
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: aliceblue;
+
+    padding: 20px;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+}
+/* Pousser à gauche le menu pour le comfort */
+.menu > a:first-child {
+    margin-left: 20px;
+}
+/* Réaction visuel de menu sur le souris */
+.menu a:hover {
+    background-color: #40fd47;
+    color: #1b1b1b;
+
+    transition-duration: 0.4s;
+}
+
+/** Sous-Menu
+======================================*/
+/* Paramètres de sous menu */
+.sousMenu .sousMenu__btn {
+    display: block;
+    color: aliceblue;
+    font-size: inherit;
+    background-color: inherit;
+    font-family: inherit;
+}
+/* Réaction quand le souris est sur le bouton de menu */
+.sousMenu:hover .sousMenu__btn {
+    transition-duration: .4s;
+    transition-timing-function: linear;
+    background-color: #40fd47;
+    color: #1b1b1b;
+}
+/* Ajustement de sous menu, cacher le sous menu par default */
+.sousMenu__contenu {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 100px;
+    box-shadow: 5px 5px black;
+    border-radius: 0px 10px 10px 10px;
+    z-index: 1;
+}
+/* Ajustement des elements de sous menu */
+.sousMenu__contenu a {
+    float: none;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+/* Réaction quand le souris est sur le bouton de sous menu*/
+.sousMenu__contenu a:hover {
+    background-color: #40fd47;
+    transition-duration: none;
+}
+/* Mettre les elements du sous menu en blocks*/
+.sousMenu:hover .sousMenu__contenu {
+    display: block;
+}
+
+/** Écran de smartphone pour MENU & Footer
+======================================*/
+@media screen and (max-width: 720px) {
+    /* Mettre le contenu du menu en colonne */
+    .menu {
+        flex-flow: column;
+    }
+    /* Centraliser le texte du menu*/
+    .menu > a {
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    /* Correction de bug avec le menu*/
+    .menu a:first-child {
+        margin-left: 0px;
+    }
+    /* Correction de bug avec main et header*/
+    header, main {
+        margin: 0;
+    }
+    /* Correction de bug avec footer*/
+    footer > * {
+        padding-right: 5px;
+    }
+
+    /** Sous Menu adapté aux téléphones
+    Effets visuels + centraliser le texte*/
+    .sousMenu .sousMenu__btn {
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    /* Effet visuel sur le contours et sut le l'écran */
+    .sousMenu-content {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+}
+/*
+***************************************************************
+***************************************************************
+***************************************************************
+*/
+
+/** Accueil
+======================================*/
+/* Mettre le texte au milieu */
+.info {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Boite de texte ajustement */
+.container {
+    margin: 20px;
+    padding: 0px 30px;
+}
+
+/* Ajustement de l'image profil */
+.avatar {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 200px;
+
+    text-align: center;
+}
+
+/** Validation
+======================================*/
+/* Ajustement visuel*/
+.block {
+    margin: 0 30px;
+}
+/* Creation des blocks responsives avec le contenu*/
+.block__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px
+}
+/* Correction visuel des blocks et établissement des limites boites par ligne*/
+.block__items > div {
+    flex: 1 1 25%;
+    border: 1px solid #40fd47;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: -2px 5px black;
+}
+/* Definition de taille images par defaut */
+.block__items > div > img {
+    width: 600px;
+    transform: scale(1);
+    transition-duration: 1s;
+}
+/* Effet visuel de zoom en mettant le souris */
+.block__items > div > img:hover {
+    transform: scale(1.5);
+    transform-origin: center;
+    transition-duration: 1s;
+}
+
+/** Contact
+======================================*/
+/* Correction de la boite du texte */
+textarea {
+    height: 80px;
+    width: 300px;
+    resize: none;
+}
+/* Mettre le contenu à droite et à gauche + visuel */
+.contact__form {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+
+    max-width: 800px;
+    min-height: 250px;
+    padding: 20px;
+    margin: 0 auto;
+    border: solid 1px #40fd47;
+    border-radius: 20px;
+    box-shadow: -2px 5px black;
+}
+/* Ajustement du contenu dans les blocks */
+.contact__form > div {
+    align-self: center;
+}
+/* Changement visuel du bouton "Envoyer" */
+.btn {
+    text-decoration: none;
+    background-color: #585858;
+    border: 1px solid #1b1b1b;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -3px 8px #1b1b1b;
+    margin: 10px 0px;
+
+    transition: 0.4s;
+}
+/* Changement visuel du bouton "Envoyer"  avec le souris*/
+.btn:hover {
+    text-decoration: none;
+    background-color: #40fd47;
+    color: black;
+    border: 1px solid #1b1b1b;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -3px 8px #1b1b1b;
+    margin: 10px 0px;
+
+    transition: 0.4s;
+}
+/* Changement visuel du bouton selection */
+#sex {
+    text-decoration: none;
+    background-color: #40fd47;
+    border: 1px solid #1b1b1b;
+    border-radius: 3px;
+    padding: 3px;
+}
+.lienDecor {
+    text-decoration: none;
+    color: inherit;
+}
+
+/** Formation
+======================================*/
+/* Placer le contenu à droite et à gauche*/
+.sect__formation {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 20px;
+    gap: 10px;
+}
+/* Établir le limite du block pour la classe sousContenu*/
+.text__block {
+    width: 100%;
+}
+/* Centraliser et diviser visuellement le contenu */
+.form__text {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #40fd47;
+}
+/* Aligner et diviser visuellement la photo */
+.form__photo {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #40fd47;
+}
+
+/** Experiences
+======================================*/
+/* Placer intro à gauche et experience à droite */
+.sect__experience {
+    display: grid;
+    grid-template-columns: 25% 70%;
+    gap: 10px;
+}
+/* Ajustement de texte intro */
+.exp__intro {
+    padding: 16px;
+}
+/* Mettre le contenu en ligne du haut vers le bas */
+.exp__cont {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Division visuel des blocks */
+.exp__cont > div{
+    padding-bottom: 5px;
+    border-bottom: solid 1px #40fd47;
+}
+/* Ajustement du texte h6 */
+h6 {
+    margin: 0;
+    padding: 16px 0 10px 0;
+}
+/* Placer le contenu à droite et à gauche */
+.sousContenu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/** Écran de smartphone for MENU & Footer
+======================================*/
+@media screen and (max-width: 720px) {
+    /** Formation
+    * Mettre les blocks en colonnes
+    ======================================*/
+    .sect__formation {
+        display: block;
+    }
+    /* Enlever les bordures sur le texte, effet visuel*/
+    .form__text {
+        border: none;
+    }
+    /** Experiences
+    * Mettre les blocks en colonnes
+    ======================================*/
+    .sect__experience {
+        display: block;
+    }
+
+    /** Contact
+    * Mettre les blocks en colonnes
+    ======================================*/
+    .contact__form {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        margin: 20px;
+    }
+}
+
