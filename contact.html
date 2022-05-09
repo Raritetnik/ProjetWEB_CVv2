@@ -6,8 +6,9 @@
     <title>Accueil</title>
 </head>
 <body>
+    <div class="blockContainer">
     <nav class="menu">
-        <a href="index.html">Accueil</a>
+        <a class='active' href="index.html">Accueil</a>
         <div class="sousMenu">
             <a href="formation.html" class="sousMenu__btn">Formation</a>
             <div class="sousMenu__contenu">
@@ -37,13 +38,17 @@
             </div>
             <form>
                 <h2>Laisser un message</h2>
-                <h5>Bonjour <select name="sex" id="sex">
-                    <option value="M">M.</option>
-                    <option value="Mr">Mr.</option>
-                    <option value="Mlle">Mlle.</option>
-                    <option value="Mme">Mme.</option>
-                </select>,</h5>
                 <table>
+                    <tr>
+                        <td colspan="2">
+                            <h5>Bonjour <select name="sex" id="sex">
+                                <option value="M">M.</option>
+                                <option value="Mr">Mr.</option>
+                                <option value="Mlle">Mlle.</option>
+                                <option value="Mme">Mme.</option>
+                            </select>,</h5>
+                        </td>
+                    </tr>
                     <tr>
                         <td><h5>Prénom: <input class='nom__conf' type="text" id="prenom" name="prenom" placeholder="Prénom"/></h5></td>
                         <td><h5>Nom: <input class='nom__conf' type="text" id="nom" name="nom" placeholder="Nom"/></h5></td>
@@ -62,5 +67,6 @@
     <footer>
         @ Tous les droits sont réservés
     </footer>
+    </div>
 </body>
 </html>

@@ -1,11 +1,17 @@
 /** Paramètres basique
 ======================================*/
 /* Predefinition de base sur le texte, font, et couleur de texte*/
-body {
+html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #3b3b3b;
     margin: auto;
+    height: 100%;
     color: aliceblue;
+}
+/* Ajustement du contenu pour le footer */
+.blockContainer {
+    min-height: 100%;
+    position: relative;
 }
 /* Placer au centre le texte */
 header {
@@ -17,17 +23,17 @@ header {
 main {
     margin-top: 20px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
 }
-/* Mettre le footer sur le bas de la page */
+/* Mettre le footer en bas de la page */
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     margin-top: 40px;
     background-color: #585858;
     text-align: end;
     padding: 10px 3% 10px 0;
     width: 97%;
-
 }
 
 
@@ -59,6 +65,11 @@ footer {
     padding: 20px;
     letter-spacing: 2px;
     transition-duration: 0.4s;
+}
+
+.menu > a.active {
+    background-color: #40fd47;
+    color: #1b1b1b;
 }
 /* Pousser à gauche le menu pour le comfort */
 .menu > a:first-child {
@@ -142,6 +153,9 @@ footer {
     footer > * {
         padding-right: 5px;
     }
+    footer {
+        position: relative;
+    }
 
     /** Sous Menu adapté aux téléphones
     Effets visuels + centraliser le texte*/
@@ -184,6 +198,7 @@ footer {
     text-align: center;
 }
 
+
 /** Validation
 ======================================*/
 /* Ajustement visuel*/
@@ -208,15 +223,17 @@ footer {
 }
 /* Definition de taille images par defaut */
 .block__items > div > img {
-    width: 600px;
+    width: 450px;
+    position: relative;
     transform: scale(1);
     transition-duration: 1s;
 }
 /* Effet visuel de zoom en mettant le souris */
 .block__items > div > img:hover {
-    transform: scale(1.5);
+    transform: scale(2);
     transform-origin: center;
     transition-duration: 1s;
+    z-index: 2;
 }
 
 /** Contact
@@ -293,11 +310,12 @@ textarea {
     display: grid;
     grid-template-columns: 60% 40%;
     margin: 20px;
-    gap: 10px;
+
 }
 /* Établir le limite du block pour la classe sousContenu*/
 .text__block {
     width: 100%;
+    padding: 10px;
 }
 /* Centraliser et diviser visuellement le contenu */
 .form__text {
@@ -309,7 +327,7 @@ textarea {
 /* Aligner et diviser visuellement la photo */
 .form__photo {
     text-align: center;
-    padding-bottom: 5px;
+    padding: 10px 0px;
     border-bottom: solid 1px #40fd47;
 }
 
@@ -334,7 +352,7 @@ textarea {
 }
 /* Division visuel des blocks */
 .exp__cont > div{
-    padding-bottom: 5px;
+    padding: 10px;
     border-bottom: solid 1px #40fd47;
 }
 /* Ajustement du texte h6 */
