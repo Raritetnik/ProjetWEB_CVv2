@@ -28,38 +28,28 @@
         </div>
         <a href="validation.html">Validation</a>
     </nav>
+    <header>
+    </header>
     <main>
         <section class="contact__form">
-            <div>
-                <h2>Contacts</h2>
-                <h5> ☎️ - (438) xxx - xxxx </h5>
-                <h5> 🌐 - <a class="lienDecor" href="https://www.google.com/ ">https://www.google.com/</a></h5>
-                <h5> 📧 - mkodarenko@gmail.com </h5>
-            </div>
             <form>
-                <h2>Laisser un message</h2>
-                <table>
-                    <tr>
-                        <td colspan="2">
-                            <h5>Bonjour <select name="sex" id="sex">
-                                <option value="M">M.</option>
-                                <option value="Mr">Mr.</option>
-                                <option value="Mlle">Mlle.</option>
-                                <option value="Mme">Mme.</option>
-                            </select>,</h5>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><h5>Prénom: <input class='nom__conf' type="text" id="prenom" name="prenom" placeholder="Prénom"/></h5></td>
-                        <td><h5>Nom: <input class='nom__conf' type="text" id="nom" name="nom" placeholder="Nom"/></h5></td>
-                    </tr>
-                    <tr>
-                        <td><h5>Courriel:<input type="text" id="courriel" name="courriel" placeholder="Votre courriel"/></h5></td>
-                        <td><h5>Téléphone: <input type="text" id="cell" name="cell" placeholder="(514)555-1111"/></h5></td>
-                    </tr>
-                </table>
-                <h5>Votre commentaire: </h5>
-                <textarea id="commentaire" name="commentaire" placeholder="Entrez votre commentaire"></textarea>
+                <h1 class="contact__titre">Message</h1>
+                <input class='nom__conf' type="text" id="prenom" name="prenom" placeholder="Prénom"/>
+                <input class='nom__conf' type="text" id="nom" name="nom" placeholder="Nom"/>
+                <input type="text" id="courriel" name="courriel" placeholder="Courriel"/>
+                <input type="text" id="cell" name="cell" placeholder="(514) 555-1111"/>
+
+                <h2>Moyen de vous contacter</h2>
+                <select name="modeContact" id="modeContact">
+                    <option value="M">--Vous choix--</option>
+                    <option value="M">Téléphone</option>
+                    <option value="Mr">Message texte</option>
+                    <option value="Mlle">Courriel</option>
+                    <option value="Mme">En personne</option>
+                </select>
+
+                <h3>Votre commentaire: </h3>
+                <textarea id="commentaire" name="commentaire" placeholder="Texte..."></textarea>
                 <br/><input class="btn" type="submit" value="Envoyer"/>
             </form>
         </section>
