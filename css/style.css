@@ -291,7 +291,7 @@ h1 {
 }
 
 
-/*************************************************************************/
+/* Ajustement de texte */
 
 .texte__validation {
     font-size: inherit;
@@ -326,7 +326,7 @@ h1 {
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0px 10px 5px black;
+    box-shadow: 0px 0px 20px black;
 }
 
 
@@ -391,7 +391,7 @@ textarea::placeholder {
     margin: 20px auto;
     border: solid 1px #40fd47;
     border-radius: 20px;
-    box-shadow: -2px 5px black;
+    box-shadow: 0px 0px 20px black;
 }
 
 
